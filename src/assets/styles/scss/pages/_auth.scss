@@ -1,0 +1,20 @@
+.login,
+.register,
+.reset-password,
+.update-password {
+  padding: 1rem 2rem 2rem;
+
+  display: grid;
+  grid-auto-rows: min-content;
+  justify-content: center;
+  grid-template-rows: 20% 1fr;
+
+  &__logo {
+    @include flex-center;
+
+    a {
+      margin: 0 !important;
+      align-self: start;
+    }
+  }
+}

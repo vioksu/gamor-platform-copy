@@ -1,0 +1,87 @@
+.info {
+  @include responsive('padding', (xs: 2rem, lg: 4rem));
+
+  h1 {
+    @include responsive('font-size', (xs: 36px, lg: 48px));
+    font-weight: 700;
+    text-transform: lowercase;
+    color: var(--text-primary);
+    background-image: none;
+    background-position:
+      0px calc(25% - 20px),
+      0 calc(50% - 20px),
+      0 calc(75% - 20px),
+      0 calc(100% - 20px);
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    @media only screen and (min-width: 1280px) {
+      background-image:
+      url("images/title-back-light.svg"),
+      url("images/title-back-light.svg"),
+      url("images/title-back-light.svg"),
+      url("images/title-back-light.svg");
+    }
+
+    span {
+      color: var(--accent-invert);
+    }
+  }
+
+  p {
+    color: var(--text-secondary);
+    text-transform: lowercase;
+
+    span {
+      color: var(--text-primary);
+      font-weight: 700;
+      position: relative;
+      white-space: nowrap;
+
+      &::after {
+        content: '';
+        width: 90px;
+        height: 10px;
+        position: absolute;
+        bottom: -14px;
+        left: 0;
+        right: 0;
+        background-image: url("images/enphasis-dark.svg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+      }
+    }
+  }
+
+  &__cta {
+    display: flex;
+    align-items: center;
+    @include space-x(2rem);
+
+    &--sign-in {
+      color: var(--text-secondary);
+      text-decoration-line: none;
+      white-space: nowrap;
+
+      &:hover {
+        color: var(--accent);
+      }
+    }
+  }
+}
+
+[data-theme='dark'] .hero h1 {
+  background-image: none;
+
+  @media only screen and (min-width: 1280px) {
+    background-image:
+      url("images/title-back-dark.svg"),
+      url("images/title-back-dark.svg"),
+      url("images/title-back-dark.svg"),
+      url("images/title-back-dark.svg");
+  }
+}
+
+[data-theme='dark'] .hero p span::after {
+  background-image: url("images/enphasis-light.svg")
+}

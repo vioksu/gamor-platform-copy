@@ -1,0 +1,76 @@
+.card {
+  display: grid;
+  background-color: var(--surface);
+  border-radius: 18px;
+  padding: 2rem;
+  margin-top: 6rem;
+
+  h2 {
+    text-align: center;
+  }
+
+  form {
+    margin-top: 1rem;
+
+    label {
+      font-size: 12px;
+      color: var(--text-secondary);
+    }
+
+    input {
+      margin-top: .5rem;
+    }
+
+    .form-group {
+      margin-top: 1rem;
+
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-error {
+      color: var(--error);
+      margin-top: .3rem;
+    }
+
+    button {
+      background-color: var(--btn-cta);
+      color: var(--btn-cta-text);
+      margin-top: 1rem;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &.loading {
+        cursor: not-allowed;
+      }
+
+      & svg {
+        margin-right: 10px;
+        height: 1rem;
+        width: 1rem;
+        color: #fff;
+
+        & circle {
+          opacity: 0.25;
+        }
+
+        & path {
+          opacity: 0.75;
+        }
+      }
+    }
+  }
+
+  span {
+    font-size: 14px;
+    color: var(--text-primary);
+  }
+
+  a {
+    color: var(--accent);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+  }
+}

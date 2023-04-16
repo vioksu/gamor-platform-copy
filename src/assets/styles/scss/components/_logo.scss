@@ -1,0 +1,20 @@
+.logo {
+  @include responsive('font-size', (xs: 22px, lg: 28px));
+  font-weight: 700;
+  position: relative;
+  color: var(--text-primary);
+  @include responsive('margin-left', (xs: calc(1.5rem + 2rem), lg: 0));
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    z-index: 1000;
+    @include responsive('left', (xs: -14px, lg: -18px));
+    @include responsive('width', (xs: 22px, lg: 28px));
+    @include responsive('height', (xs: 22px, lg: 28px));
+    border-radius: 9999px;
+    background-color: var(--background-drop);
+    backdrop-filter: blur(6px);
+  }
+}

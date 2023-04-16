@@ -1,0 +1,15 @@
+.trending-categories {
+  @include responsive('margin', (xs: 4rem 0, lg: 6rem auto));
+
+  h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+
+  &__list {
+    display: grid;
+    @include responsive('grid-template-columns', (xs: 1fr, sm: 1fr 1fr, lg: repeat(4, 1fr)));
+    gap: .7rem;
+  }
+}

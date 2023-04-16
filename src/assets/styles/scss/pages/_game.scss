@@ -1,0 +1,21 @@
+.game {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 2rem;
+
+  img {
+    border: 3px solid var(--accent);
+    border-radius: 8px;
+  }
+
+  h3 {
+    color: var(--text-primary);
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--text-secondary);
+    max-width: 48rem;
+  }
+}

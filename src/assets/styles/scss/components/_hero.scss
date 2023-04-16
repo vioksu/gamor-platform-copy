@@ -1,0 +1,46 @@
+.hero {
+  background-color: var(--surface);
+  border-radius: 1rem;
+  background-color: var(--surface);
+  @include responsive('margin-top', (xs: 7rem, sm: 10rem));
+
+  display: grid;
+  grid-template-columns: repeat(1, minmax(auto, 1fr));
+  grid-template-areas:
+  "info"
+  "panel"
+  "search";
+
+  @media only screen and (min-width: 768px) {
+    // grid-template-columns: repeat(2, minmax(auto, 1fr));
+    grid-template-areas:
+    "info info"
+    "panel panel"
+    "info search";
+  }
+
+  @media only screen and (min-width: 1280px) {
+    grid-template-columns: repeat(3, minmax(auto, 1fr));
+    grid-template-areas:
+    "info panel search";
+  }
+
+  &__info {
+    grid-area: info;
+
+    display: grid;
+    @include responsive('align-items', (xs: start, lg: center));
+  }
+
+  &__panel {
+    // background-color: var(--accent-party);
+    // background-image: linear-gradient(to bottom right, var(--gradients-stop));
+    background-color: var(--accent);
+    border-radius: 4px;
+    grid-area: panel;
+  }
+
+  &__search {
+    grid-area: search;
+  }
+}

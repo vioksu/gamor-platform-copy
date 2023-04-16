@@ -1,0 +1,46 @@
+.navigation-options {
+  @include flex-center;
+  @include space-x(.2rem);
+
+  @media only screen and (min-width: 1024px) {
+    @include space-x(1rem);
+  }
+
+  & li {
+    @include flex-center;
+  }
+
+  &__user {
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  &__user,
+  &__sign,
+  &__create-account {
+    @include responsive('display', (xs: none!important, lg: flex!important));
+  }
+
+  &__sign-out {
+    @include responsive('display', (xs: flex!important, lg: none!important));
+    color: var(--accent);
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &.mobile &__create-account {
+    display: flex !important;
+  }
+
+  &.mobile &__sign,
+  &.mobile &__sign-out,
+  &.mobile &__switch-theme {
+    display: none;
+  }
+}

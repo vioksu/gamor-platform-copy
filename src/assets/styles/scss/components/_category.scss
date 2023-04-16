@@ -1,0 +1,59 @@
+.category {
+  padding: 2rem;
+  background-color: var(--surface);
+  cursor: pointer;
+  border-radius: .5rem;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration-line: none;
+  color: var(--text-primary);
+
+  display: flex;
+  flex-direction: column;
+  @include space-y(.5rem);
+
+  &:hover {
+    background-image: url('/images/shooter-games-poster.jpg');
+    background-color: rgba(violet,0.75);
+    background-size: 125%;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: 2s ease all;
+    background-blend-mode: multiply;
+  }
+
+  &:hover h4,
+  &:hover svg {
+    color: #fff;
+  }
+
+  &__number {
+    position: relative;
+    color: var(--zinc-400);
+
+    &::before {
+      content: '';
+      width: 1px;
+      height: 12px;
+      position: absolute;
+      left: -4px;
+      top: -2px;
+      transform: rotate(25deg);
+      background-color: var(--accent);
+    }
+  }
+
+  h4 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+
+  svg {
+    color: var(--text-primary);
+  }
+}
+
+[data-theme='dark'] .category:hover {
+  background-color: rgba(orange,0.75);
+}

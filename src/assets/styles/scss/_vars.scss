@@ -1,0 +1,136 @@
+:root {
+  // FONTS
+  --inter-font: "Inter", sans-serif;
+
+  // BREAKPOINTS
+  --xs-breakpoint: 0;
+  --sm-breakpoint: 640px;
+  --md-breakpoint: 768px;
+  --lg-breakpoint: 1024px;
+  --xl-breakpoint: 1280px;
+  --xxl-breakpoint: 1536p;
+
+  // COLORS
+  --zinc-50: #fafafa;
+  --zinc-100: #f4f4f5;
+  --zinc-200: #e4e4e7;
+  --zinc-300: #d4d4d8;
+  --zinc-400: #a1a1aa;
+  --zinc-500: #71717a;
+  --zinc-600: #52525b;
+  --zinc-700: #3f3f46;
+  --zinc-800: #27272a;
+  --zinc-900: #18181b;
+  --zinc-950: #09090b;
+
+  --violet-50: #f5f3ff;
+  --violet-100: #ede9fe;
+  --violet-200: #ddd6fe;
+  --violet-300: #c4b5fd;
+  --violet-400: #a78bfa;
+  --violet-500: #8b5cf6;
+  --violet-600: #7c3aed;
+  --violet-700: #6d28d9;
+  --violet-800: #5b21b6;
+  --violet-900: #4c1d95;
+  --violet-950: #2e1065;
+
+  --orange-50: #fff7ed;
+  --orange-100: #ffedd5;
+  --orange-200: #fed7aa;
+  --orange-300: #fdba74;
+  --orange-400: #fb923c;
+  --orange-500: #f97316;
+  --orange-600: #ea580c;
+  --orange-700: #c2410c;
+  --orange-800: #9a3412;
+  --orange-900: #7c2d12;
+  --orange-950: #431407;
+
+  // LIGHT THEME
+  --background: var(--zinc-100);
+  --background-drop: rgba(244, 244, 245, .2);
+  --background-revert: var(--zinc-900);
+  --surface: var(--zinc-50);
+  --text-primary: var(--zinc-950);
+  --text-primary-hover: var(--zinc-950);
+  --text-secondary: var(--zinc-700);
+  --error: #ef4444;
+  --accent: var(--violet-500);
+  --accent-party: var(--violet-600);
+  --accent-invert: var(--orange-500);
+  --accent-invert-light: var(--orange-400);
+  --accent-hover: var(--violet-600);
+  --on-top-accent-invert: var(--violet-700);
+  --border: var(--zinc-200);
+  --btn-primary: var(--zinc-900);
+  --btn-primary-text: #fff;
+  --btn-primary-hover: var(--zinc-600);
+  --outline: var(--zinc-400);
+  --offset-color: var(--zinc-300);
+  --menu: var(--zinc-950);
+  --gradients-stop: var(--violet-400), var(--violet-900);
+  --gradients-stop-2: transparent, white;
+
+  --btn-cta: var(--zinc-950);
+  --btn-cta-text: #fff;
+  --btn-cta-border: var(--zinc-950);
+  --btn-cta-hover: var(--zinc-700);
+  --btn-cta-outline: var(--zinc-400);
+  --btn-cta-offset-color: var(--zinc-300);
+
+  --btn-cta-light: #fff;
+  --btn-cta-light-hover: var(--zinc-50);
+  --btn-cta-light-text: var(--zinc-950);
+
+  --btn-tabs: #fff;
+  --btn-tabs-border: var(--zinc-100);
+  --btn-tap: var(--zinc-100);
+  --btn-tap-hover: var(--zinc-200);
+
+  --badge: var(--zinc-100);
+}
+
+[data-theme='dark'] {
+  --background: var(--zinc-900);
+  --background-drop: rgba(24, 24, 27, .2);
+  --background-revert: var(--zinc-100);
+  --surface: var(--zinc-800);
+  --text-primary: #fff;
+  --text-primary-hover: var(--zinc-950);
+  --text-secondary: #a7a4a4;
+  --error: #f87171;
+  --accent: var(--orange-500);
+  --accent-party: var(--orange-400);
+  --accent-invert: var(--violet-500);
+  --accent-invert-light: var(--violet-400);
+  --accent-hover: var(--orange-600);
+  --on-top-accent-invert: var(--orange-700);
+  --border: var(--zinc-500);
+  --btn-primary: #fff;
+  --btn-primary-text: var(--zinc-900);
+  --btn-primary-hover: var(--zinc-100);
+  --outline: var(--zinc-900);
+  --offset-color: var(--zinc-300);
+  --menu: #fff;
+  --gradients-stop: var(--orange-400), var(--orange-900);
+  --gradients-stop-2: transparent, var(--gray-700);
+
+  --btn-cta: var(--zinc-950);
+  --btn-cta-text: #fff;
+  --btn-cta-border: var(--zinc-500);
+  --btn-cta-hover: var(--zinc-700);
+  --btn-cta-outline: var(--zinc-900);
+  --btn-cta-offset-color: var(--zinc-900);
+
+  --btn-cta-light: var(--zinc-700);
+  --btn-cta-light-hover: var(--zinc-900);
+  --btn-cta-light-text: #fff;
+
+  --btn-tabs: var(--zinc-900);
+  --btn-tabs-border: var(--zinc-400);
+  --btn-tap: var(--zinc-700);
+  --btn-tap-hover: var(--zinc-800);
+
+  --badge: var(--zinc-950);
+}

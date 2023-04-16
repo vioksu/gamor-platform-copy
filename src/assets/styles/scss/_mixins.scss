@@ -1,0 +1,63 @@
+$sm-breakpoint: 40em; // 640px
+$md-breakpoint: 48em; // 768px
+$lg-breakpoint: 64em; // 1024px
+$xl-breakpoint: 80em; // 1280px
+$xxl-breakpoint: 96em; // 1536px
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: $sm-breakpoint,
+  md: $md-breakpoint,
+  lg: $lg-breakpoint,
+  xl: $xl-breakpoint,
+  xxl: $xxl-breakpoint
+);
+
+// Mixin for calculate all media query for a property
+// Usage: @include responsive('font-size', (xs: 14px, l: 20px))
+// Available breakpoints: see properties of grid-breakpoints
+@mixin responsive($property, $map) {
+  @each $breakpoint, $value in $map {
+    @if $breakpoint == null {
+      #{$property}: $value;
+    } @else {
+      @if map-has-key($grid-breakpoints, $breakpoint) {
+        $breakpoint: map-get($grid-breakpoints, $breakpoint);
+      }
+      @media screen and (min-width: $breakpoint) {
+        #{$property}: $value;
+      }
+    }
+  }
+}
+
+// Mixin to Add horizontal space between children
+// Usage: @include space-y(1rem)
+@mixin space-y($value) {
+  &>:not([hidden])~:not([hidden]) {
+    margin-top: $value;
+  }
+}
+
+// Mixin to Add vertical space between children
+// Usage: @include space-x(1rem)
+@mixin space-x($value) {
+  &>:not([hidden])~:not([hidden]) {
+    margin-left: $value;
+  }
+}
+
+// Align center with flex-box
+@mixin flex-center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Align center with css-grid
+@mixin grid-center() {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+

@@ -1,0 +1,15 @@
+.switch-theme {
+  background-color: transparent;
+
+  &:focus {
+    outline: none;
+  }
+
+  &>* {
+    color: var(--accent);
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}

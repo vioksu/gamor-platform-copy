@@ -1,0 +1,16 @@
+.error-page {
+  margin-left: auto;
+  margin-right: auto;
+  @include responsive('max-width', (xs: auto, sm: auto, md: auto, lg: auto, xl: auto, xxl: 1280px));
+  @include responsive('padding', (xs: 1.5rem, lg: 1.5rem 3rem));
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  @include space-y(1.5rem);
+
+  i {
+    color: var(--accent);
+  }
+}
