@@ -1,7 +1,12 @@
 import { useAuth } from "../context/AuthProvider";
 import { Navigate, Outlet, useLocation } from "react-router-dom";
+import { ReactNode } from "react";
 
-const AuthRoute = ({ children }) => {
+type PropsType = {
+  children: ReactNode
+}
+
+const AuthRoute = ({ children }: PropsType) => {
   const { user } = useAuth();
   const location = useLocation();
 

@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useState } from "react"
+import { createContext, useContext, useEffect, useState, ReactNode } from "react"
 import { supabase } from "../hooks/useSupabase"
 
 const AuthContext = createContext({})
@@ -21,7 +21,11 @@ const passwordReset = (email: string) =>
 const updatePassword = (updatedPassword: string) =>
   supabase.auth.updateUser({ password: updatedPassword })
 
-export default function AuthProvider({ children }: any) {
+type PropsType = {
+  children: ReactNode
+}
+
+export default function AuthProvider({ children }: PropsType) {
   const [user, setUser] = useState(null)
   const [auth, setAuth] = useState(false)
   const [loading, setLoading] = useState(false);
